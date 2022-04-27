@@ -34,7 +34,7 @@ app.listen(PORT, () =>
 
 app.error(function(err, req, res, next){
   if (err instanceof NotFound) {
-      res.render('404.html');
+      res.render(errPage);
   } else {
       next(err);
   }
